@@ -18,7 +18,7 @@ import com.example.navigationjetpackcompose.navigation.Screen
 import com.example.navigationjetpackcompose.ui.theme.NavigationJetpackComposeTheme
 
 @Composable
-fun Home(navController: NavController) {
+fun DetailScreen(navController: NavController) {
     NavigationJetpackComposeTheme {
 
         Column(
@@ -30,15 +30,21 @@ fun Home(navController: NavController) {
 
             Text(
                 modifier = Modifier.clickable {
-                    navController.navigate(route = Screen.DetailScreen.passNameAndId(
-                        id = 1,
-                        name = "Patrick"
-                    ))
+
+                    //navController.navigate(route = "home_screen")
+
+                    //Example of Pop Back Stack:
+                    navController.navigate(Screen.HomeScreen.route) {
+                        popUpTo(Screen.HomeScreen.route) {
+                            inclusive = true
+                        }
+                    }
+
                 },
 
-                text = "Home Screen",
-                fontSize = MaterialTheme.typography.titleLarge.fontSize,
-                color = MaterialTheme.colorScheme.primary,
+                text = "Detail Screen",
+                fontSize = MaterialTheme.typography.displayLarge.fontSize,
+                color = MaterialTheme.colorScheme.error,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
             )
@@ -50,6 +56,6 @@ fun Home(navController: NavController) {
 
 @Preview(showBackground = true)
 @Composable
-fun HomePreview() {
-    Home(rememberNavController())
+fun DetailPreview() {
+    DetailScreen(rememberNavController())
 }
