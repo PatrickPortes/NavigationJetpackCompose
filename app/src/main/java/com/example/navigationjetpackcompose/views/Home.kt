@@ -14,6 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.navigationjetpackcompose.navigation.Screen
 import com.example.navigationjetpackcompose.ui.theme.NavigationJetpackComposeTheme
 
 @Composable
@@ -29,7 +30,10 @@ fun Home(navController: NavController) {
 
             Text(
                 modifier = Modifier.clickable {
-                    navController.navigate(route = "detail_screen")
+                    navController.navigate(route = Screen.DetailScreen.passNameAndId(
+                        id = 1,
+                        name = "Patrick"
+                    ))
                 },
 
                 text = "Home Screen",
