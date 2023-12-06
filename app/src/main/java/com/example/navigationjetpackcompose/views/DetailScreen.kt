@@ -46,7 +46,8 @@ fun DetailScreen(navController: NavController) {
                 fontSize = MaterialTheme.typography.displayLarge.fontSize,
                 color = MaterialTheme.colorScheme.error,
                 fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                lineHeight = MaterialTheme.typography.displayLarge.lineHeight
             )
 
         }

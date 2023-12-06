@@ -42,7 +42,8 @@ fun HomeScreen(navController: NavController) {
                 fontSize = MaterialTheme.typography.displayLarge.fontSize,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                lineHeight = MaterialTheme.typography.displayLarge.lineHeight
             )
             Text(
                 modifier = Modifier

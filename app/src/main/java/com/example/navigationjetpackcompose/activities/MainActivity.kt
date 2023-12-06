@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.navigationjetpackcompose.navigation.MainScreen
 import com.example.navigationjetpackcompose.navigation.nav_graph.NavGraph
 import com.example.navigationjetpackcompose.ui.theme.NavigationJetpackComposeTheme
 
@@ -14,7 +15,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             NavigationJetpackComposeTheme {
-                NavGraph()
+                //NavGraph()
+                MainScreen()
             }
         }
     }
@@ -24,6 +26,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TestPreview() {
     NavigationJetpackComposeTheme {
-        NavGraph()
+        //NavGraph()
+        MainScreen()
     }
 }
